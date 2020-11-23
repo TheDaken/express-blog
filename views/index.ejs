@@ -1,0 +1,20 @@
+<%- include('./partials/header.ejs') %>
+<div class="tests content">
+    <h2>All Tests</h2>
+    <% if (preguntas.length > 0) { %>
+    <% preguntas.forEach(pregunta => { %>
+  
+    <h3 class="title"><%= pregunta.question %></h3>
+    <ul>
+      <li><a href=""><%= pregunta.title %></a></li>
+      <li><p><%= pregunta.snippet %></p></li>
+     
+    </ul>
+  
+  
+  
+    <% }) %>
+    <% } else { %>
+    <p>There are no tests to display...</p>
+    <% } %>
+    <%- include('./partials/footer.ejs') %>
